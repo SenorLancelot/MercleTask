@@ -34,7 +34,7 @@ const engagementMessageOverTimeChartOptions = (messageCount, channelblob) => {
     const obj = channelList.find((ch) => ch.id === channel);
 
     if (obj) {
-      const lineObject = {
+      let lineObject = {
         name: obj.name,
         data: [],
       };
@@ -51,6 +51,8 @@ const engagementMessageOverTimeChartOptions = (messageCount, channelblob) => {
       dataSeries.push(lineObject);
     }
   }
+
+  console.log(dataSeries);
 
   const options = {
     chart: {
